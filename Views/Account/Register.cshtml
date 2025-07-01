@@ -1,0 +1,36 @@
+﻿@model CorretoraDeImoveis.Models.Client
+
+@{
+    ViewData["Title"] = "Cadastre-se";
+}
+
+<h1>@ViewData["Title"]</h1>
+<p>Crie sua conta para receber novidades sobre nossos imóveis.</p>
+<hr />
+<div class="row">
+    <div class="col-md-6">
+        <form asp-controller="Account" asp-action="Register" method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="form-group">
+                <label asp-for="FullName" class="control-label"></label>
+                <input asp-for="FullName" class="form-control" />
+                <span asp-validation-for="FullName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Email" class="control-label"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="PhoneNumber" class="control-label"></label>
+                <input asp-for="PhoneNumber" class="form-control" />
+                <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+            </div>
+            <br />
+            <div class="form-group">
+                <input type="submit" value="Criar Minha Conta" class="btn btn-success" />
+            </div>
+        </form>
+    </div>
+</div>
